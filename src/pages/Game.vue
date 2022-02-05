@@ -22,8 +22,8 @@
             class="flex flex-wrap w-[320px] gap-[10px]">
                 <div
                 :class="[
-                notNone($store.state.game.board[i]) ? ($store.state.game.board[i]=='X' ? 'bg-blue-500 text-white':'text-white bg-red-500') : 'bg-gray-200 text-black'],
-                notNone($store.state.game.board[i]) ? 'pointer-events-none': ''
+                notNone($store.state.game.board[i]) ? ($store.state.game.board[i]=='X' ? 'bg-blue-500 text-white':'text-white bg-red-500') : 'bg-gray-200 text-black',
+                notNone($store.state.game.board[i]) ? 'pointer-events-none': '']
                 "
                 @click="
                     $store.commit('NEXT_PLAYER'),
