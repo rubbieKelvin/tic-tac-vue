@@ -4,13 +4,13 @@
             <!-- score board -->
             <div class="flex">
                 <!-- player one -->
-                <div :class="[($store.state.game.whosPlaying==0) ? 'bg-blue-500 text-white': 'bg-gray-200 text-black']" class="flex gap-3 p-2 rounded-md hover:p-3">
+                <div :class="[($store.state.game.whosPlaying==1) ? 'bg-blue-500 text-white': 'bg-gray-200 text-black']" class="flex gap-3 p-2 rounded-md hover:p-3">
                     <p>{{$store.state.game.players.playerOne}}</p>
                     <p>{{$store.state.game.score.playerOne}}</p>
                 </div>
                 <div class="flex-grow"/>
                 <!-- player two -->
-                <div :class="[($store.state.game.whosPlaying==1) ? 'bg-red-500 text-white': 'bg-gray-200 text-black']" class="flex gap-3 bg-gray-200 p-2 rounded-md hover:p-3">
+                <div :class="[($store.state.game.whosPlaying==0) ? 'bg-red-500 text-white': 'bg-gray-200 text-black']" class="flex gap-3 bg-gray-200 p-2 rounded-md hover:p-3">
                     <p>{{$store.state.game.players.playerTwo}}</p>
                     <p>{{$store.state.game.score.playerTwo}}</p>
                 </div>
